@@ -4,7 +4,7 @@ import { ShopContext } from "../../Context/ShopContaxt";
 import cartremove_icon from "../Assets/cart_cross_icon.png";
 
 const CartItems = () => {
-  const { cartItems, all_products, removeFromCart } = useContext(ShopContext);
+  const {gettotalCartAmount, cartItems, all_products, removeFromCart } = useContext(ShopContext);
 
   return (
     <div className="cartitems">
@@ -22,13 +22,13 @@ const CartItems = () => {
           return (
             <div id={e.id} key={i}>
               <div className="cartitems-formate">
-                <img src={e.image} alt="" />
+                <img src={e.image} alt=""className="cartitems-product-item" />
                 <p>{e.name}</p>
-                <p> INR{e.new_price}</p>
+                <p> ₹ {e.new_price}</p>
                 <button className="cartitems-quantity">
                   {cartItems[e.id]}
                 </button>
-                <p>INR{e.new_price * cartItems.id}</p>
+                <p>₹ {e.new_price * cartItems[e.id]}</p>
                 <img
                   className="cartitems-remove-icon"
                   onClick={()=> removeFromCart(e.id)}
@@ -42,15 +42,32 @@ const CartItems = () => {
           return null;
         }
       })}
-      <div className="cartitms-down">
+      <div className="cartitems-down">
         <div className="cartitems-total">
           <h1>Cat Total</h1>
           <div>
             <div className="cartitems-totl-item">
               <p>SubTotal</p>
-              <p>0</p>
+              <p>₹ {gettotalCartAmount()}</p>
             </div>
             <hr />
+            <div className="cartitems-totl-item">
+              <p>Shipping Fee</p>
+              <p>Free</p>
+            </div>
+            <hr />
+            <div className="cartitems-totl-item">
+              <p><strong>Total</strong></p>
+              <p>₹ {gettotalCartAmount()}</p>
+            </div>
+          </div>
+          <button>PROCEED TO CHECKOUT</button>
+        </div>
+        <div className="cartitems-promocode">
+          <p>If you have a promo cade, Enter it here</p>
+          <div className="cartitems-promobox">
+            <input type="text" placeholder="Promo Code"/>
+            <button>Submite</button>
           </div>
         </div>
       </div>
