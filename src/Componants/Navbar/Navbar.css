@@ -28,7 +28,7 @@
     font-weight: 500;
 }
 
-.nav-menu li{
+.nav-menu li {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -36,19 +36,22 @@
     gap: 3px;
     cursor: pointer;
 }
-.nav-menu hr{
+
+.nav-menu hr {
     border: none;
     height: 3px;
     width: 80%;
     border-radius: 10px;
     background: #ff4141;
 }
-.nav-login-cart{
+
+.nav-login-cart {
     display: flex;
     align-items: center;
     gap: 45px;
 }
-.nav-login-cart button{
+
+.nav-login-cart button {
     width: 100px;
     height: 40px;
     outline: none;
@@ -60,10 +63,12 @@
     background-color: #fff;
     cursor: pointer;
 }
-.nav-login-cart button:active{
+
+.nav-login-cart button:active {
     background: #f3f3f3;
 }
-.nav-cart-count{
+
+.nav-cart-count {
     width: 22px;
     height: 22px;
     display: flex;
@@ -74,4 +79,99 @@
     border-radius: 14px;
     background-color: red;
     color: white;
+}
+
+.nav-dropdown {
+    height: 40px;
+    width: 50px;
+    display: none;
+}
+
+
+@media (max-width: 1280px) {
+    .navbar {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-logo p {
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 10px;
+        align-items: center;
+        background: #fff;
+    }
+
+    .nav-logo p {
+        font-size: 20px;
+    }
+
+    .nav-logo img {
+        height: 40px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        position: absolute;
+        z-index: -1;
+        height: 60px;
+        width: 100%;
+        background: #fff;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    .nav-menu li {
+        font-size: 16px;
+        
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+    }
+
+    .nav-login-cart button {
+        width: 80px;
+        height: 30px;
+        border-radius: 60px;
+        font-size: 15px;
+    }
+
+    .nav-cart-count {
+        width: 22px;
+        height: 22px;
+        margin-left: -30px;
+        border-radius: 14px;
+    }
+
+    .nav-dropdown {
+        display: block;
+        cursor: pointer;
+        rotate: -90deg;
+        transition: 0.6s ease-in-out;
+    }
+
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
+
+    .nav-menu-visible {
+        top: 60px;
+        z-index: 1;
+    }
+
 }

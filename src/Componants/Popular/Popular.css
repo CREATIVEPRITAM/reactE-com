@@ -22,3 +22,35 @@
     display: flex;
     gap: 30px;
 }
+
+@media (max-width: 1280px) {
+    .popular{
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    .popular h1{
+        font-size: 40px;
+    }
+    .popular hr{
+        width: 200px;
+        height: 6px;
+        border-radius: 10px;
+        background: #252525;
+    }
+    .popular-item{
+        margin-top: 50px;
+        display: flex;
+        gap: 10px;
+    }   
+}
+@media (max-width: 500px) {
+    .popular-item{
+        margin-top: 30px;
+       justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .popular h1{
+        font-size: 30px;
+    }
+}
