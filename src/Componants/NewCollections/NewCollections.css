@@ -22,3 +22,13 @@
     margin-top: 50px;
     gap: 30px;
 }
+
+@media (max-width: 500px) {
+    .new-collections h1{
+        font-size: 30px;
+    }   
+    .new-collections hr{
+        width: 100px;
+        height: 4px;
+    }
+}
