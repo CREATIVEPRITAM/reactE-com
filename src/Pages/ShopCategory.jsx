@@ -39,7 +39,7 @@ const ShopCategory = (props) => {
           }
         })}
       </div>
-      <div className="shopcategory-loadnore">
+      <div className="shopcategory-loadmore">
         Explore More
       </div>
     </div>
