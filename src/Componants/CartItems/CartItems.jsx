@@ -8,6 +8,7 @@ const CartItems = () => {
 
   return (
     <div className="cartitems">
+      <div className="cards-lists">
       <div className="cartitems-formate-main">
         <p>Products</p>
         <p>Title</p>
@@ -42,6 +43,7 @@ const CartItems = () => {
           return null;
         }
       })}
+      </div>
       <div className="cartitems-down">
         <div className="cartitems-total">
           <h1>Cat Total</h1>
