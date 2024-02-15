@@ -7,15 +7,14 @@
     overflow-x: scroll;
     width: 100%;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .cartitems hr {
     height: 3px;
     background: #e2e2e2;
     border: none;
+    width: 100%;
 }
 
 .cartitems-formate-main,
@@ -29,10 +28,22 @@
     font-weight: 600;
 }
 
+.cartitems-formate-main p:nth-child(2) {
+    width: 150px;
+}
+
+.cartitems-formate p:nth-child(2) {
+    width: 180px;
+    text-align: start;
+}
+
+
 .cartitems-formate {
     font-size: 16px;
     font-weight: 500;
+    text-align: center;
 }
+
 .cartitems-product-item {
     height: 60px;
 }
@@ -124,7 +135,17 @@
         gap: 40px;
     }
 }
+
 @media (max-width: 1020px) {
+
+    .cartitems-formate-main,
+    .cartitems-formate {
+        width: 100%;
+    }
+    .cartitems-formate-main hr {
+        width: 100%;
+    }
+
     .cartitems {
         margin: 80px 60px;
     }
@@ -133,15 +154,18 @@
         margin-right: 50px;
         gap: 40px;
     }
+
     .cartitems-promobox {
         width: 400px;
         height: 50px;
     }
+
     .cartitems-promobox button {
         width: 150px;
         height: 50px;
     }
 }
+
 @media (max-width: 800px) {
     .cartitems {
         margin: 60px 40px;
@@ -151,12 +175,60 @@
         margin-right: 50px;
         gap: 40px;
     }
+    
+
     .cartitems-promobox {
         width: 400px;
         height: 50px;
+    }
+
+    .cartitems-promobox button {
+        width: 150px;
+        height: 50px;
+    }
+    .cartitems-down {
+        flex-direction: column;
     }
     .cartitems-promobox button {
         width: 150px;
         height: 50px;
     }
+}
+
+@media (max-width: 500px) {
+    .cartitems {
+        margin: 60px 20px;
+        /* background-color: red; */
+    }
+
+    .cartitems-formate-main p:nth-child(2) {
+        width: 150px;
+    }
+
+    .cartitems-formate-main hr {
+        width: 100%;
+    }
+
+    .cartitems-formate p:nth-child(2) {
+        width: 180px;
+    }
+
+    .cartitems-total {
+        margin-right: 50px;
+        gap: 40px;
+    }
+    .cartitems-total button {
+        margin-bottom: 20px;
+    }
+
+    .cartitems-promobox {
+        width: 220px;
+        height: 50px;
+    }
+
+    .cartitems-promobox button {
+        padding: 0px 10px;
+        height: 50px;
+    }
+  
 }
